@@ -1,29 +1,40 @@
-class Sorting
+class Selection_sort
 {
-	
-	static int[] selection_sort(int arr[])  {
+	static void selection_sort(int arr[] , boolean isAscending)  {
 		
-		for(int i=0;i<arr.length;i++)  {
+		for(int i = 0; i < arr.length; i++)  {
 			int pos = i;
-		
-			for(int j = i+1 ; j < arr.length ; j++) {   // finding the smallest element
-				if(arr[j] < arr[pos]) 
-					pos=j;
+			
+			if(isAscending) {
+				for(int j = i + 1 ; j < arr.length ; j++) {   // finding the smallest element
+					if(arr[j] < arr[pos]) 
+						pos=j;
+				}
+			}
+			else {
+				for(int j = i + 1 ; j < arr.length ; j++) {   // finding the largest element
+					if(arr[j] > arr[pos]) 
+						pos=j;
+				}
 			}
 			int temp = arr[i];   // swapping the elements
 			arr[i] = arr[pos];
 			arr[pos] = temp;
 		}
-		return arr;
 	}
 
 	public static void main (String[] args)
 	{
-		int arr[] =  {64, 25, 12, 22, 11};
+		int arr[] =  {-12, 11, 13, -5, 6, 7 , 11, 2};
                   
-		arr = selection_sort(arr);
+		selection_sort(arr , true);
 		
-		for(int x : arr)
-			System.out.print(x + "\t");
+		System.out.print("The ascending order is : " );
+		for(int x : arr)	System.out.print(x + "\t");
+		
+		selection_sort(arr , false);
+		
+		System.out.print("\nThe descending order is : " );
+		for(int x : arr)	System.out.print(x + "\t");
 	}
 }
