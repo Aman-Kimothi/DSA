@@ -1,7 +1,6 @@
-class Sorting
+class Insertion_sort
 {
-	
-	static int[] insertion_sort(int arr[])  {
+	static void insertion_sort(int arr[] , boolean isAscending)  {
 		
 		for(int i = 1 ; i < arr.length ; i++)  {
 		
@@ -9,24 +8,35 @@ class Sorting
 			int key = arr[i];  // saving element stored at arr[i]
 			
 			// shifting all the elements to one position forward untill it finds a location to put the key
-			while(j >= 0 && arr[j] > key ) {
-				arr[j+1] = arr[j];
-				j--;
+				
+			if(isAscending) {			// Ascending Order
+				while(j >= 0 && arr[j] > key ) {
+					arr[j+1] = arr[j];
+					j--;
+				}
 			}
-			
+			else {						// Descending Order			
+				while(j >= 0 && arr[j] < key ) {
+					arr[j+1] = arr[j];
+					j--;
+				}
+			}
 			arr[j+1] = key;
 		}
-		
-		return arr;
 	}
 
 	public static void main (String[] args)
 	{
-		int arr[] =  {64, 25, 12, 22, 11};
+		int arr[] =  {-12, 11, 13, -5, 6, 7 , 2 , 11};
 		
-		arr = insertion_sort(arr);
+		insertion_sort(arr , true);
 		
-		for(int x : arr)
-			System.out.print(x + "\t");
+		System.out.print("The ascending order is : " );
+		for(int x : arr)	System.out.print(x + "\t");
+		
+		insertion_sort(arr , false);
+		
+		System.out.print("\nThe descending order is : " );
+		for(int x : arr)	System.out.print(x + "\t");
 	}
 }

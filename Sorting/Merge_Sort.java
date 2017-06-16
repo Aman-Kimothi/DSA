@@ -46,7 +46,7 @@ class Sorting
 		
 		if(l < r) {
 		
-			int mid = l+(r-l)/2;  // Same as (l+r)/2 but avoids overflow
+			int mid = l +(r - l)/2;  // Same as (l+r)/2 but avoids overflow. We can also use (l+r) >> 1 .
 			
 			merge_sort( arr , l , mid , isAscending);
 			merge_sort( arr , mid+1 , r , isAscending);
