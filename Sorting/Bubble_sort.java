@@ -1,4 +1,4 @@
-class Bubble_sort
+class Bubble_Sort
 {	
 	static void bubble_sort(int arr[] , boolean isAscending)  {
 		
