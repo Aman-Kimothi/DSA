@@ -49,20 +49,19 @@ class Bucket_Sort
 			list[index].add(arr[i]);
 		}
 		
-		int k = 0;     // Counter for storing the bucket elements in the result array
+		int k = 0;     		// Counter for storing the bucket elements in the result array
 		
-		if(isAscending) k = 0;	
-		else			k = arr.length - 1;
+		if(isAscending) 	k = 0;				// for Ascending Order
+		else			k = arr.length - 1;		// for Descending Order
 		
 		for (int i = 0; i < 10; i++) {     // For every bucket, do insertion sort and add the sorted array to the output array
 			   
 		    if(list[i] == null) continue;
 		    
 		    int size = list[i].size() , count = 0;
-		    ArrayList<Double> values = list[i];
-		    double[] temp = new double[size];
+		    double[] temp = new double[size];	     // Using an array to store the bucket elements
 			
-			for(Double num : values)
+			for(Double num : list[i])
 				temp[count++] = num;
 			
 		    temp = insertion_sort(temp);	     // Insertion Sort only in Ascending Order will also do the job as we can fill the resultant array from behind in the Descending Order case
