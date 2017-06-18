@@ -30,18 +30,18 @@ class Bucket_Sort_using_HashMap
 			if(hmap.get(index) == null) {					// If the key value is not present in the HashMap
 				ArrayList<Double> list=new ArrayList<>();
 				list.add(arr[i]);
-				hmap.put(index , list);						// Putting the list with one value
+				hmap.put(index , list);					// Putting the list with one value
 			}
 			else  {
-				ArrayList<Double> list=hmap.get(index);		// If the key value is present in the HashMap
+				ArrayList<Double> list=hmap.get(index);			// If the key value is present in the HashMap
 				list.add(arr[i]);
-				hmap.put(index , list);						// Putting the list with additional values
+				hmap.put(index , list);					// Putting the list with additional values
 			}	
 		}
 		int  k = 0;
 		
 		if(isAscending)		k = 0;				// for Ascending Order
-		else				k = len - 1;		// for Descending Order
+		else			k = len - 1;			// for Descending Order
 		
 		for (Map.Entry<Integer, ArrayList<Double>> entry : hmap.entrySet()) {
 		   
@@ -50,10 +50,10 @@ class Bucket_Sort_using_HashMap
 		    
 		    Collections.sort(value);				// Sorting the specific bucket
 		    
-		    if(isAscending)							// Ascending Order
+		    if(isAscending)					// Ascending Order
 			    for(double x : value)
 			    	output[k++]=x;
-			else									// Descending Order
+			else						// Descending Order
 				for(double x : value)
 			    	output[k--]=x;
 		}		
