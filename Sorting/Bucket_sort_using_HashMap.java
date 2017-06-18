@@ -52,10 +52,18 @@ class Bucket_Sort_using_HashMap
 		    
 		    if(isAscending)					// Ascending Order
 			    for(double x : value)
-			    	output[k++]=x;
-			else						// Descending Order
+			    	output[k++] = x;
+		    else						// Descending Order
 				for(double x : value)
-			    	output[k--]=x;
+			    	output[k--] = x;
+			
+		    /* You can also do this without using conditional statements by taking a variable 
+			
+			    k = -1 and var = 1   ->  Ascending Order
+			    k = len and var = -1   ->  Descending Order
+			    for(double x : value)	
+				output[ k = k + var ] = x;	  */
+			
 		}		
 		return output;
 	}
