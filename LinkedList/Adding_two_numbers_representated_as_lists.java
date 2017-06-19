@@ -13,7 +13,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Adding_2_numbers_representated_as_lists {
+class Adding_two_numbers_representated_as_lists {
 	
 	static class Node {
 		int data;
@@ -96,7 +96,7 @@ class Adding_2_numbers_representated_as_lists {
 	
 	public static void main(String args[]) {
 		
-		Adding_2_numbers_representated_as_lists obj = new Adding_2_numbers_representated_as_lists();
+		Adding_two_numbers_representated_as_lists obj = new Adding_two_numbers_representated_as_lists();
 		
 		Node head1 = null , head2 = null , head3 = null;
 		

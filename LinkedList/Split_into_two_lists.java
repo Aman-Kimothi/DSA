@@ -14,7 +14,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Split_into_2_lists {
+class Split_into_two_lists {
 	
 	static class Node {
 		int data;
@@ -70,7 +70,7 @@ class Split_into_2_lists {
 	
 	public static void main(String args[]) {
 		
-		Split_into_2_lists obj = new Split_into_2_lists();
+		Split_into_two_lists obj = new Split_into_two_lists();
 		
 		Node head1 = null , head2= null;
 		
