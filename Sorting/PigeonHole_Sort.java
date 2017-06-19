@@ -4,7 +4,7 @@ class PigeonHole_Sort
 	// This sorting technique is same as Counting Sort but not as efficient as Counting Sort 
 	// It is not very efficient if the range is becomes very large.
 	
-	public static int[] pigeonhole_sort(int arr[] )  {
+	public static int[] pigeonhole_sort(int arr[] , boolean isAscending )  {
 		
 		int len = arr.length ;
 		int min = arr[0] , max = arr[0];
@@ -30,10 +30,18 @@ class PigeonHole_Sort
 		
 		int k = 0;
 		
-		for(int i = 0; i < range; i++)  {    	
-			for(int  value : pigeonholes[i])
-				output[k++]=value;
-		}	
+		if(isAscending)	{ 
+			for(int i = 0; i < range; i++)  {    	
+				for(int  value : pigeonholes[i])
+					output[k++]=value;
+			}	
+		}
+		else {
+			for(int i = range - 1; i >= 0; i--)  {    	
+				for(int  value : pigeonholes[i])
+					output[k++]=value;
+			}
+		}
 		return output;
 	}
 
@@ -42,10 +50,15 @@ class PigeonHole_Sort
 		
 		int arr[] = {234, 44, 124, 49, 56, 3, 844, 223, 234, 141, 444};
 		
-		arr = pigeonhole_sort(arr);
-	
-		for(int x : arr)
-			System.out.print(x + "\t");
+		arr = pigeonhole_sort(arr , true);
+		
+		System.out.print("The ascending order is : " );
+		for(int x : arr)	System.out.print(x + "\t");
+		
+		arr = pigeonhole_sort(arr , false);
+		
+		System.out.print("\nThe descending order is : " );
+		for(int x : arr)	System.out.print(x + "\t");
 	
 	}
 }
