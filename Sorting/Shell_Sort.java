@@ -12,10 +12,10 @@ class Shell_sort
 				int temp = arr[i];
 				int j;
 				
-				if(isAscending)													// for Ascending Order
+				if(isAscending)								// for Ascending Order
 					for(j = i ; j >= gap && arr[j - gap] > temp ; j -= gap)
 						arr[j] = arr[j - gap];
-				else															// for Descending Order
+				else									// for Descending Order
 					for(j = i ; j >= gap && arr[j - gap] < temp ; j -= gap)
 						arr[j] = arr[j - gap];
 					
