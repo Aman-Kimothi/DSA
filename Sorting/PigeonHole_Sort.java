@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 class PigeonHole_Sort
 {
+	// This sorting technique is same as Counting Sort but not as efficient as Counting Sort 
+	// It is not very efficient if the range is becomes very large.
+	
 	public static int[] pigeonhole_sort(int arr[] )  {
 		
 		int len = arr.length ;
@@ -8,21 +11,21 @@ class PigeonHole_Sort
 		
 		int[] output = new int[len];
 		
-		for(int i = 1;i < len; i++) {   // finding max and min
+		for(int i = 1; i < len; i++) {  			 // finding max and min
 			if(arr[i] > max)
 				max = arr[i];
 			if(arr[i] < min)
 				min = arr[i];
 		}
 		
-		int range = max - min + 1;  				 // finding range for no. of buckets
+		int range = max - min + 1;  				 // finding range for no. of pigeonhole
 		
 		ArrayList<Integer>[] pigeonholes = (ArrayList<Integer>[]) new ArrayList[range];
 	
-		for(int i = 0;i < range; i++)   			// initializing the arraylist[]
+		for(int i = 0; i < range; i++)   			// initializing the arraylist[]
 			pigeonholes[i] = new ArrayList<Integer>();
 	
-		for(int i = 0;i < len; i++)       			// adding the number to their specific pigeonhole (arraylist)
+		for(int i = 0; i < len; i++)       			// adding the number to their specific pigeonhole (arraylist)
 			pigeonholes[arr[i] - min].add(arr[i]);
 		
 		int k = 0;
