@@ -1,0 +1,48 @@
+import java.util.ArrayList;
+class PigeonHole_Sort
+{
+	public static int[] pigeonhole_sort(int arr[] )  {
+		
+		int len = arr.length ;
+		int min = arr[0] , max = arr[0];
+		
+		int[] output = new int[len];
+		
+		for(int i = 1;i < len; i++) {   // finding max and min
+			if(arr[i] > max)
+				max = arr[i];
+			if(arr[i] < min)
+				min = arr[i];
+		}
+		
+		int range = max - min + 1;  				 // finding range for no. of buckets
+		
+		ArrayList<Integer>[] pigeonholes = (ArrayList<Integer>[]) new ArrayList[range];
+	
+		for(int i = 0;i < range; i++)   			// initializing the arraylist[]
+			pigeonholes[i] = new ArrayList<Integer>();
+	
+		for(int i = 0;i < len; i++)       			// adding the number to their specific pigeonhole (arraylist)
+			pigeonholes[arr[i] - min].add(arr[i]);
+		
+		int k = 0;
+		
+		for(int i = 0; i < range; i++)  {    	
+			for(int  value : pigeonholes[i])
+				output[k++]=value;
+		}	
+		return output;
+	}
+
+	public static void main (String[] args)	
+	{
+		
+		int arr[] = {234, 44, 124, 49, 56, 3, 844, 223, 234, 141, 444};
+		
+		arr = pigeonhole_sort(arr);
+	
+		for(int x : arr)
+			System.out.print(x + "\t");
+	
+	}
+}
