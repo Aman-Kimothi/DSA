@@ -6,6 +6,7 @@
 	3. The node is not present in the list.
 	
 	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 

@@ -6,6 +6,7 @@
 	3. Insertion of a node after a Node whose value is given.
 	
 	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 

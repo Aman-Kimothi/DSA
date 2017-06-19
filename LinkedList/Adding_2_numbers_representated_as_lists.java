@@ -9,6 +9,7 @@
 	  Resultant list: 3->1->6  		 // represents number  613
 	
 	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 

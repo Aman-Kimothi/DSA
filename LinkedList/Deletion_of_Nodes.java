@@ -5,6 +5,7 @@
 	2. Deleting a node whose position is given
 	
 	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 

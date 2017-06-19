@@ -7,6 +7,7 @@
 	4. Both the elements are present in the Linked List
 	
 	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 

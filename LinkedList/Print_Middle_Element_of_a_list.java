@@ -8,6 +8,7 @@
 		1->2->3->4->5->6		:   Middle Element - 4
 	
 	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 

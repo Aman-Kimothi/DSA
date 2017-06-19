@@ -7,6 +7,7 @@
 	4. Nth position from back signifies any other node of the linked list
 	
 	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
