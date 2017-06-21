@@ -30,7 +30,7 @@ class Swapping_of_Nodes {
 		return head;
 	}
 		
-	Node swap(int data1 , int data2 , Node head)  {
+	Node swap_values(int data1 , int data2 , Node head)  {
 		
 		Node prev1 = null , curr1 = head;
 		Node prev2 = null , curr2 = head;
@@ -47,6 +47,43 @@ class Swapping_of_Nodes {
 		
 		if(curr1 == null || curr2 == null) {
 			System.out.println("\nCannot swap the values as one(or both) values are missing");
+			return head;
+		}
+		
+		if(prev1 == null)   		// if data1 is at 1st position (head)
+			head = curr2;
+		else
+			prev1.next = curr2;
+		
+		if(prev2 == null)  			// if data2 is at 1st position (head)
+			head = curr1;
+		else
+			prev2.next = curr1;
+			
+		Node temp = curr1.next;   	// swapping the next values of the nodes
+		curr1.next = curr2.next;
+		curr2.next = temp;
+		
+		return head;
+	}
+	
+	Node swap_nodes(Node data1 , Node data2 , Node head)  {
+		
+		Node prev1 = null , curr1 = head;
+		Node prev2 = null , curr2 = head;
+		
+		while(curr1 != null && curr1 != data1) {
+			prev1 = curr1;
+			curr1 = curr1.next;
+		}
+			
+		while(curr2 != null && curr2 != data2) {
+			prev2 = curr2;
+			curr2 = curr2.next;
+		}
+		
+		if(curr1 == null || curr2 == null) {
+			System.out.println("\nCannot swap the nodes as one(or both) nodes are missing");
 			return head;
 		}
 		
@@ -93,21 +130,45 @@ class Swapping_of_Nodes {
 		System.out.print("Linked List is  :  " );
 		obj.printList(head);
 		
+		// Using swap_value to swap the nodes
+		
+		if(head == null) {
+			System.out.print("The Linked List is empty" );
+			return ;
+		}
+		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 2
-		head = obj.swap(1 , 2, head);
+		head = obj.swap_values(1 , 2, head);
 		obj.printList(head);
 		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 3
-		head = obj.swap(5 , 6, head);
+		head = obj.swap_values(5 , 6, head);
 		obj.printList(head);
 		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 4
-		head = obj.swap(3 , 4, head);
+		head = obj.swap_values(3 , 4, head);
 		obj.printList(head);
 		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 1
-		head = obj.swap(3 , 10, head);
+		head = obj.swap_values(3 , 10, head);
 		obj.printList(head);
 		
+		// Using swap_nodes to swap the nodes
+		
+		System.out.print("\nAfter swapping  :  " ); 		// Case 2
+		head = obj.swap_nodes(head , head.next, head);
+		obj.printList(head);
+		
+		System.out.print("\nAfter swapping  :  " ); 		// Case 3
+		head = obj.swap_nodes(head.next.next.next.next , head.next.next , head);
+		obj.printList(head);
+		
+		System.out.print("\nAfter swapping  :  " ); 		// Case 4
+		head = obj.swap_nodes(head.next.next.next.next , head.next.next.next.next.next , head);
+		obj.printList(head);
+		
+		System.out.print("\nAfter swapping  :  " ); 		// Case 1
+		head = obj.swap_nodes(head.next.next.next.next , head.next.next.next.next.next.next , head);
+		obj.printList(head);
 	}
 }
