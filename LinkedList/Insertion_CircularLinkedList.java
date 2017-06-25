@@ -56,7 +56,7 @@ class Insertion_CircularLinkedList  {
     
     /* There are 2 functions for adding a node after a specified node whose value is given.
 			
-		1. 	add_after()
+		1.  add_after()
 		2.  add_after_value()
 		
 		Both the functions work properly, but the second one is more readable and efficient.
@@ -66,7 +66,7 @@ class Insertion_CircularLinkedList  {
         
         
         if(last == null) {
-        	System.out.println(data +"  cannot be added because the Linked List is empty");
+            System.out.println(data +"  cannot be added because the Linked List is empty");
             return null;
         }
         
@@ -153,15 +153,15 @@ class Insertion_CircularLinkedList  {
             
         Node last = null;           // Circular Linked List
 	
-		last = list.add_front(5 , last);
-		last = list.add_front(4 , last);
-		last = list.add_front(3 , last);
-		last = list.add_front(2 , last);
-		last = list.add_front(1 , last);
-		last = list.add_end(9 , last);
-		last = list.add_end(8 , last);
-		last = list.add_end(7 , last);
-		last = list.add_end(6 , last);
+	last = list.add_front(5 , last);
+	last = list.add_front(4 , last);
+	last = list.add_front(3 , last);
+	last = list.add_front(2 , last);
+	last = list.add_front(1 , last);
+	last = list.add_end(9 , last);
+	last = list.add_end(8 , last);
+	last = list.add_end(7 , last);
+	last = list.add_end(6 , last);
         
         System.out.println("Circular Linked List is : " );
         list.print(last);	
