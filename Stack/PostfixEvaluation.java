@@ -78,7 +78,7 @@ class PostfixEvaluation {
 		
 		PostfixEvaluation obj = new PostfixEvaluation();
 		
-		String postfix = "10 15 + 20 5 + *";     // ( a + b) * ( c + d) : Infix
+		String postfix = "10 15 + 20 5 + *";    		 // ( a + b) * ( c + d) : Infix
 		
 		String evaluation = obj.postfixEvaluation(postfix);
 		
