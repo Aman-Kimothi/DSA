@@ -26,17 +26,17 @@ class StackUsingArray {
 			System.out.println("Stack Overflow");
 			return false;
 		}
-		arr[++top] = data;					// Pushing the data
+		arr[++top] = data;				// Pushing the data
 		return true;
 	}
 	
 	int pop() {
 	
-		if(top < 0) {						// Underflow condition
+		if(top < 0) {					// Underflow condition
 			System.out.println("Stack Underflow");
 			return Integer.MIN_VALUE;
 		}
-		return arr[top--]; 					// Popping the data
+		return arr[top--]; 				// Popping the data
 	}
 	
 	boolean isEmpty() {
@@ -55,7 +55,6 @@ class StackUsingArray {
 		
 		for(int i = top; i >= 0; i--)
 			System.out.print(arr[i] + "\t");
-		
 		System.out.println();	
 	}
 	
