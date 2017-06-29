@@ -29,16 +29,16 @@ class StackUsingLinkedList {
 	void push(int data) {
 		Node new_node = new Node(data);
 		new_node.next = head;				// Linking the head to the next of the new node
-		head = new_node;					// Making the new node as the head
+		head = new_node;				// Making the new node as the head
 	}
 	
 	int pop() {
-		if(head == null) {					// Underflow condition
+		if(head == null) {				// Underflow condition
 			System.out.println("Stack Underflow");
 			return Integer.MIN_VALUE;
 		}
-		Node temp = head;					// Storing the head in a node
-		head = head.next;					// Making the next node as the new node i.e removing the head node
+		Node temp = head;				// Storing the head in a node
+		head = head.next;				// Making the next node as the new node i.e removing the head node
 		return temp.data;
 	}
 	
