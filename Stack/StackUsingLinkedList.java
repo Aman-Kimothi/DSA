@@ -9,7 +9,7 @@
 */
 
 
-class Stack_using_linked_list {
+class StackUsingLinkedList {
 	
 	Node head;
 	
@@ -22,7 +22,7 @@ class Stack_using_linked_list {
 		}
 	}
 	
-	public Stack_using_linked_list() {
+	public StackUsingLinkedList() {
 		head = null;
 	}
 	
@@ -73,7 +73,7 @@ class Stack_using_linked_list {
 	
 	public static void main(String args[]) {
 		
-		Stack_using_linked_list st = new Stack_using_linked_list();
+		StackUsingLinkedList st = new StackUsingLinkedList();
 		st.push(1);
 		st.push(2);
 		st.push(3);

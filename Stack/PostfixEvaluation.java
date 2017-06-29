@@ -1,6 +1,6 @@
 /*
 	Postfix evaluation using stack. 
-	It works for multiple digit numbers and basic operations like + - * / & ^
+	It works for multi digit numbers and basic operations like + - * / & ^
 	
 	Postfix Expresion : 10 15 + 20 5 + * 
 	Postfix Evaluation : 625
@@ -18,9 +18,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-class Postfix_evaluation {
+class PostfixEvaluation {
 	
-	String postfix_evaluation(String st) {
+	String postfixEvaluation(String st) {
 	
 		Stack<String> stack = new Stack<String>();
 		StringTokenizer str = new StringTokenizer(st);
@@ -76,18 +76,18 @@ class Postfix_evaluation {
 	
 	public static void main(String args[]) {
 		
-		Postfix_evaluation obj = new Postfix_evaluation();
+		PostfixEvaluation obj = new PostfixEvaluation();
 		
 		String postfix = "10 15 + 20 5 + *";     // ( a + b) * ( c + d) : Infix
 		
-		String evaluation = obj.postfix_evaluation(postfix);
+		String evaluation = obj.postfixEvaluation(postfix);
 		
 		System.out.println("Postfix Expresion : " +postfix);
 		System.out.println("Postfix Evaluation : " +evaluation);
 		
 		postfix = "7 5 3 2 ^ * 9 2 2 ^ - / + 6 4 * +";
 		
-		evaluation = obj.postfix_evaluation(postfix);
+		evaluation = obj.postfixEvaluation(postfix);
 		
 		System.out.println("\nPostfix Expresion : " +postfix);
 		System.out.println("Postfix Evaluation : " +evaluation);

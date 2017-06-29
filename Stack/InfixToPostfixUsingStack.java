@@ -49,9 +49,9 @@ class Operators {
 		}
 }
 
-class Infix_to_Postfix_using_stack {
+class InfixToPostfixUsingStack {
 	
-	String infix_to_postfix(String st) {
+	String infixToPostfix(String st) {
 	
 		Stack<Character> stack = new Stack<Character>();
 		String result = "";
@@ -103,18 +103,18 @@ class Infix_to_Postfix_using_stack {
 	
 	public static void main(String args[]) {
 		
-		Infix_to_Postfix_using_stack obj = new Infix_to_Postfix_using_stack();
+		InfixToPostfixUsingStack obj = new InfixToPostfixUsingStack();
 		
 		String infix = "(A+B)*C-(D-E)*(F+G)";
 		
-		String postfix = obj.infix_to_postfix(infix);
+		String postfix = obj.infixToPostfix(infix);
 		
 		System.out.println("Infix Exp : " +infix);
 		System.out.println("Postfix Exp : " +postfix);
 		
 		infix = "a+b*(c^d-e)^(f+g*h)-i";
 		
-		postfix = obj.infix_to_postfix(infix);
+		postfix = obj.infixToPostfix(infix);
 		
 		System.out.println("\nInfix Exp : " +infix);
 		System.out.println("Postfix Exp : " +postfix);

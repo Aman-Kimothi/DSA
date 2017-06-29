@@ -9,12 +9,12 @@
 */
 
 
-class Stack_using_array {
+class StackUsingArray {
 	
 	int top , size;
 	int[] arr;
 	
-	public Stack_using_array(int size) {
+	public StackUsingArray(int size) {
 		top = -1;
 		this.size = size;
 		arr = new int[size];
@@ -54,14 +54,14 @@ class Stack_using_array {
 	void print() {
 		
 		for(int i = top; i >= 0; i--)
-			System.out.println(arr[i] + "\t");
+			System.out.print(arr[i] + "\t");
 		
 		System.out.println();	
 	}
 	
 	public static void main(String args[]) {
 		
-		Stack_using_array st = new Stack_using_array(10);
+		StackUsingArray st = new StackUsingArray(10);
 		st.push(1);
 		st.push(2);
 		st.push(3);
@@ -86,6 +86,8 @@ class Stack_using_array {
 		st.push(7);
 		st.push(8);
 		st.push(9);
+		
+		System.out.print("Stack elements are  :  " );	
 		st.print();
 	}
 }
