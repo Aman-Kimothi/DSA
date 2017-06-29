@@ -24,8 +24,8 @@ class Operators {
 		
 		public Operators() {
 			arr = new char[][] {   {'+' , '-' ,'*' ,'/' ,'^'} ,
-								   {'1' ,'1' ,'2' ,'2' ,'3' }
-							   };
+					       {'1' ,'1' ,'2' ,'2' ,'3' }
+					   };
 		}
 		
 		/* This function is to check whether the precedence of the stack character is greater than or equal 
@@ -42,7 +42,7 @@ class Operators {
 					stack_ = arr[1][i];	
 			}
 			
-			if(cur <= stack_)					// if the precedence is greater than or equal to.
+			if(cur <= stack_)				// if the precedence is greater than or equal to.
 				return true;
 			else
 				return false;
@@ -61,7 +61,7 @@ class InfixToPostfixUsingStack {
 		for(int i = 0; i < len; i++) {
 			char ch = st.charAt(i);
 			
-			if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))		// if it is an operand
+			if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))	// if it is an operand
 				result += ch;
 			else {
 				
@@ -69,15 +69,15 @@ class InfixToPostfixUsingStack {
 					stack.push(ch);
 					continue;
 				}
-				else if(ch == ')') {		// pop all the elements until you find '(' in the stack
+				else if(ch == ')') {			// pop all the elements until you find '(' in the stack
 				
  					while (!stack.isEmpty() && stack.peek() != '(')
-                    	result += stack.pop();
+                    				result += stack.pop();
 						
 					if (!stack.isEmpty() && stack.peek() != '(')		// invalid expression 
 						return "Invalid Expression"; 		
 					
-                    stack.pop();	
+                   			 stack.pop();	
 				}
 				else {			// when there is a operator
 						
