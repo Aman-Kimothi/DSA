@@ -30,12 +30,12 @@ class ReverseStack {
 	
 	void reverse()  {					
 		
-		if(st.isEmpty())				// when stack becomes empty
+		if(st.isEmpty())			// when stack becomes empty
 			return ;
 		
 		int temp = (int)st.pop();		// popping the top value
-		reverse();						// recursively reversing the whole stack
-		insertAtEnd(temp);				// inserting the popped element at the end
+		reverse();				// recursively reversing the whole stack
+		insertAtEnd(temp);			// inserting the popped element at the end
 	}
 	
 	/* This function recursively pops all the elements of the stack
@@ -47,14 +47,14 @@ class ReverseStack {
 	   data is added at the end of the present stack.	*/
 	
 	void insertAtEnd(int data) {
-		if(st.isEmpty()) {				// if the stack is empty, push the data
+		if(st.isEmpty()) {			// if the stack is empty, push the data
 			st.push(data);
 			return ;
 		}
 			
 		int temp = st.pop();			// popping the top value
-		insertAtEnd(data);				// recursively popping all the elements of the stack
-		st.push(temp);					// pushing the popped values stored in the function call stack
+		insertAtEnd(data);			// recursively popping all the elements of the stack
+		st.push(temp);				// pushing the popped values stored in the function call stack
 	}
 	
 	public static void main(String args[]) {
