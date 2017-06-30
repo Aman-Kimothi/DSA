@@ -29,12 +29,12 @@ class SortStackUsingRecursion {
 	
 	void sort()  {					
 		
-		if(st.isEmpty())				// when stack becomes empty
+		if(st.isEmpty())			// when stack becomes empty
 			return ;
 		
 		int temp = (int)st.pop();		// popping the top value
-		sort();							// recursively sorting the whole stack
-		sortedInsert(temp);				// inserting the popped element in a sorted manner
+		sort();					// recursively sorting the whole stack
+		sortedInsert(temp);			// inserting the popped element in a sorted manner
 	}
 	
 	/* This function recursively pops all the elements of the stack
@@ -48,13 +48,13 @@ class SortStackUsingRecursion {
 	
 	void sortedInsert(int data) {
 		if(st.isEmpty() || data > st.peek()) {		// if the stack is empty, push the data
-			st.push(data);							// if the data is greater than the top element, push the data
+			st.push(data);				// if the data is greater than the top element, push the data
 			return ;
 		}
 			
 		int temp = st.pop();			// popping the top value
-		sortedInsert(data);				// recursively popping all the elements of the stack
-		st.push(temp);					// pushing the popped values stored in the function call stack
+		sortedInsert(data);			// recursively popping all the elements of the stack
+		st.push(temp);				// pushing the popped values stored in the function call stack
 	}
 	
 	public static void main(String args[]) {
@@ -62,14 +62,14 @@ class SortStackUsingRecursion {
 		 SortStackUsingRecursion obj = new SortStackUsingRecursion();	
 		
 		 obj.push(-5);
-         obj.push(18);
-         obj.push(4);
+		 obj.push(18);
+		 obj.push(4);
 		 obj.push(1);
 		 obj.push(3);
 		 obj.push(5);
 		 obj.push(30);
-         obj.push(14);
-         obj.push(-3);
+		 obj.push(14);
+		 obj.push(-3);
 		 obj.push(6);
 		 obj.push(2);
 		 obj.push(-5);
