@@ -46,10 +46,16 @@ class QueueUsingArray {
 		return false;	
 	}
 	
-	int peek() {					// Returning the front element
+	int front() {					// Returning the front element
 		if(rear < 0)
 			return Integer.MIN_VALUE;
-		return arr[front];
+		return arr[front + 1];
+	}
+	
+	int rear(){						// Returning the rear element
+		if(rear < 0)	
+			return Integer.MIN_VALUE;
+		return arr[rear];
 	}
 	
 	void print() {
@@ -93,5 +99,10 @@ class QueueUsingArray {
 		
 		System.out.print("Queue elements are  :  " );	
 		st.print();
+		
+		System.out.println("Front element is  :  " + st.front());	
+		
+		System.out.println("Rear element is  :  " + st.rear());	
+		
 	}
 }
