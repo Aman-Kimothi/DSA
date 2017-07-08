@@ -18,7 +18,7 @@ class BTNode {
 	}
 }
 
-class Inorder_Traversal_using_Stack  {
+class InorderTraversalUsingRecursion{
 	
 	void inorder_traversal(BTNode root) {
 		if(root != null) {
@@ -30,7 +30,7 @@ class Inorder_Traversal_using_Stack  {
 	
 	public static void main(String args[]) {
 		
-		Inorder_Traversal_using_Stack tree = new Inorder_Traversal_using_Stack();
+		InorderTraversalUsingRecursion tree = new InorderTraversalUsingRecursion();
 		
 		BTNode root = new BTNode(1); 
 		
