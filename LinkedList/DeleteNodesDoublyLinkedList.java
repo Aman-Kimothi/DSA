@@ -8,16 +8,16 @@
 class DeleteNodesDoublyLinkedList  {
 	
         static class Node {
-			int data;
+	    int data;
             Node prev;
-			Node next;
+	    Node next;
 			
-			public Node(int d) {
-				data = d;
-	            prev = null;
-				next = null;    
-			}
-		}
+	    public Node(int d) {
+		data = d;
+	        prev = null;
+		next = null;    
+        	}
+	}
         
         Node addFirstNode(int data , Node head) {
             
