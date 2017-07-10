@@ -9,16 +9,16 @@
 class DeleteValuesDoublyLinkedList  {
 	
         static class Node {
-			int data;
+	    int data;
             Node prev;
-			Node next;
+	    Node next;
 			
-			public Node(int d) {
-				data = d;
-	                        prev = null;
-				next = null;    
-			}
-		}
+	    public Node(int d) {
+		data = d;
+		prev = null;
+		next = null;    
+	    }
+	}
         
         Node addFirstNode(int data , Node head) {
             
@@ -66,8 +66,8 @@ class DeleteValuesDoublyLinkedList  {
         		
         	if(temp == null) {
         		System.out.println("Value given is not present in the Doubly Linked List");
-                return head;
-            }	
+			return head;
+	        }	
         		
         	if(temp.next == null) {    // 2nd case  :  Deleting the last node
         		temp.prev.next = null;
@@ -135,4 +135,3 @@ class DeleteValuesDoublyLinkedList  {
         
     }
 }
-	
