@@ -20,7 +20,7 @@ class Height {
 	int height;
 }
 
-class Diameter_BinaryTree_TopBottom  {
+class DiameterBinaryTreeTopBottom  {
 	
 	int diameter(BTNode root, Height h) {
 		
@@ -53,7 +53,7 @@ class Diameter_BinaryTree_TopBottom  {
 	
 	public static void main(String args[]) {
 		
-		Diameter_BinaryTree_TopBottom tree = new Diameter_BinaryTree_TopBottom();
+		DiameterBinaryTreeTopBottom tree = new DiameterBinaryTreeTopBottom();
 		
 		BTNode root = new BTNode(1); 
 		

@@ -35,25 +35,25 @@ class BTNode {
 	}
 }
 	
-class Vertical_Order_BinaryTree  {
+class VerticalOrderBinaryTree  {
 	
 	int min , max;				// global variables used to store the min value. of lines and max value of lines.
 	
-	void vertical_order(BTNode root)  {
+	void verticalOrder(BTNode root)  {
 		
 		if(root == null) {
 			System.out.println("The tree is empty");
 			return ;
 		}
 		
-		find_Min_Max_Horizontal(root, 0);		// finding the value of max and min
+		findMinMaxHorizontal(root, 0);		// finding the value of max and min
 		
 		for(int i = min; i <= max; i++) 		// printing the nodes for each vertical line
-			print_VerticalLine(root , i, 0);
+			printVerticalLine(root , i, 0);
 		
 	}
 	
-	void print_VerticalLine(BTNode node, int line, int i) {
+	void printVerticalLine(BTNode node, int line, int i) {
 		
 		if(node == null)
 			return ;
@@ -61,12 +61,12 @@ class Vertical_Order_BinaryTree  {
 		if(i == line)					// if the node lies in the vertical line
 			System.out.print(node.data + "\t");
 			
-		print_VerticalLine(node.left , line , i-1);		//	checking the left subtree
-		print_VerticalLine(node.right , line , i+1);	//	checking the right subtree
+		printVerticalLine(node.left , line , i-1);		//	checking the left subtree
+		printVerticalLine(node.right , line , i+1);	//	checking the right subtree
 	}
 	
 	
-	void find_Min_Max_Horizontal(BTNode root, int line){
+	void findMinMaxHorizontal(BTNode root, int line){
 		
 		if(root == null)
 			return;
@@ -75,13 +75,13 @@ class Vertical_Order_BinaryTree  {
 		
 		if(max < line)	max = line;		// if max is smaller than the specific line number
 			
-		find_Min_Max_Horizontal(root.left , line - 1);		// searching in the left sub tree
-		find_Min_Max_Horizontal(root.right , line + 1);		// searching in the right sub tree
+		findMinMaxHorizontal(root.left , line - 1);		// searching in the left sub tree
+		findMinMaxHorizontal(root.right , line + 1);		// searching in the right sub tree
 	}
 	
 	public static void main(String args[]) {
 		
-		Vertical_Order_BinaryTree tree = new Vertical_Order_BinaryTree();
+		VerticalOrderBinaryTree tree = new VerticalOrderBinaryTree();
 		
 		BTNode root = new BTNode(1); 
 		
@@ -95,6 +95,6 @@ class Vertical_Order_BinaryTree  {
 		root.right.right.right = new BTNode(9);
 		
 		System.out.println("The vertical order of the tree is : ");
-		tree.vertical_order(root);
+		tree.verticalOrder(root);
 	}
 }

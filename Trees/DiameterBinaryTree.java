@@ -15,23 +15,23 @@ class BTNode {
 		right = null;
 	}
 }
-class Diameter_BinaryTree  {
+class DiameterBinaryTree  {
 	
 	int diameter(BTNode root) {
 		
 		if(root == null)
 			return 0;
 			
-		int left_height = height(root.left);						// height of the left sub tree
-		int right_height = height(root.right);						// height of the right sub tree
-		int height_with_root = left_height + 1 + right_height;		// height of the sub tree containing the root
+		int leftHeight = height(root.left);						// height of the left sub tree
+		int rightHeight = height(root.right);						// height of the right sub tree
+		int heightWithRoot = leftHeight + 1 + rightHeight;		// height of the sub tree containing the root
 		
-		int left_diameter = diameter(root.left);					// Finding diameter of the left sub tree in a recursive manner
-		int right_diameter = diameter(root.right);					// Finding diameter of the right sub tree in a recursive manner
+		int leftDiameter = diameter(root.left);					// Finding diameter of the left sub tree in a recursive manner
+		int rightDiameter = diameter(root.right);					// Finding diameter of the right sub tree in a recursive manner
 		
 		// Returning the maximum of the height(left_sub + 1[root] + righ_sub) , dia(left_sub) and dia(right_sub).
 		
-		return Math.max( height_with_root , Math.max(left_diameter , right_diameter));
+		return Math.max( heightWithRoot , Math.max(leftDiameter , rightDiameter));
 	}
 	
 	int height(BTNode root) {		// return the height of the tree
@@ -44,7 +44,7 @@ class Diameter_BinaryTree  {
 	
 	public static void main(String args[]) {
 		
-		Diameter_BinaryTree tree = new Diameter_BinaryTree();
+		DiameterBinaryTree tree = new DiameterBinaryTree();
 		
 		BTNode root = new BTNode(1); 
 		

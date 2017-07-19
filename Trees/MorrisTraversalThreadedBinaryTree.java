@@ -18,9 +18,9 @@ class BTNode {
 	}
 }
 	
-class Morris_Traversal_ThreadedBinaryTree  {
+class MorrisTraversalThreadedBinaryTree  {
 	
-	void inorder_traversal(BTNode root)  {
+	void inorderTraversal(BTNode root)  {
 		
 		if(root == null) {
 			System.out.println("The tree is empty");
@@ -57,7 +57,7 @@ class Morris_Traversal_ThreadedBinaryTree  {
 	
 	public static void main(String args[]) {
 		
-		Inorder_Traversal_ThreadedBinaryTree tree = new Inorder_Traversal_ThreadedBinaryTree();
+		MorrisTraversalThreadedBinaryTree tree = new MorrisTraversalThreadedBinaryTree();
 		
 		BTNode root = new BTNode(1); 
 		
@@ -72,7 +72,7 @@ class Morris_Traversal_ThreadedBinaryTree  {
 		
 			
 		System.out.println("The inorder traversal of the tree is : ");
-		tree.inorder_traversal(root);
+		tree.inorderTraversal(root);
 
 		root = new BTNode(1); 
 		root.left = new BTNode(2);
@@ -85,7 +85,7 @@ class Morris_Traversal_ThreadedBinaryTree  {
 		root.right.right.right = new BTNode(9);
 		
 		System.out.println("\nThe inorder traversal of the tree is : ");
-		tree.inorder_traversal(root);
+		tree.inorderTraversal(root);
 		
 	}
 }
