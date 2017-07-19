@@ -8,6 +8,7 @@
 
 import java.util.ArrayList;
 import java.util.stream.*;
+
 class BTNode {
 	int data;
 	BTNode left;
