@@ -1,7 +1,13 @@
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+
 import java.util.ArrayList;
-class Bucket_Sort
+class BucketSort
 {
-	static double[] insertion_sort(double arr[])  {			// Insertion Sort
+	static double[] insertionSort(double arr[])  {			// Insertion Sort
 		
 		int len = arr.length;
 		
@@ -30,7 +36,7 @@ class Bucket_Sort
 		return max;		
 	}
 
-	static double[] bucket_sort(double arr[] , boolean isAscending )  {
+	static double[] bucketSort(double arr[] , boolean isAscending )  {
 		
 		int len = arr.length;
 		double output[] = new double[len];
@@ -64,7 +70,7 @@ class Bucket_Sort
 			for(Double num : list[i])
 				temp[count++] = num;
 			
-		    temp = insertion_sort(temp);	     // Insertion Sort only in Ascending Order will also do the job as we can fill the resultant array from behind in the Descending Order case
+		    temp = insertionSort(temp);	     // Insertion Sort only in Ascending Order will also do the job as we can fill the resultant array from behind in the Descending Order case
 		    
 		    if(isAscending)					     //	Ascending Order
 			    for(double x : temp)		   	// Filling the array from front
@@ -84,12 +90,12 @@ class Bucket_Sort
 		double arr[] =  {12.91, 312.122, 121.32, 32.25, 11.36, 43.27 , 33.18 , 34.56 ,54.22 ,433.75};
 		double brr[] =  {.91, .122, .32, .25, .36, .27 , .18 , .56 , .22 , .75};
 		
-		arr = bucket_sort(arr , true);
+		arr = bucketSort(arr , true);
 		System.out.println("The sorted array in ascending order is :  ");
 		
 		for(double x : arr)		System.out.print(x + "\t");
 			
-		brr = bucket_sort(brr , false);
+		brr = bucketSort(brr , false);
 		System.out.println("\nThe sorted array in descending order is :  ");
 		
 		for(double x : brr)		System.out.print(x + "\t");

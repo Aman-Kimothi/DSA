@@ -1,6 +1,11 @@
-class Comb_sort
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+class CombSort
 {
-	static void comb_sort(int arr[] , boolean isAscending)  {
+	static void combSort(int arr[] , boolean isAscending)  {
 	
 		int len = arr.length;
 		boolean flag = true;			// Using a pass flag increases the efficiency. 
@@ -34,12 +39,12 @@ class Comb_sort
 	{
 		int arr[] = {44, 124, 49, 56, 3, -44, 23, 234, 141, 444};
 		
-		comb_sort(arr , true);
+		combSort(arr , true);
 		System.out.println("The sorted array in ascending order is :  ");
 		
 		for(int x : arr)		System.out.print(x + "\t");
 		
-		comb_sort(arr , false);
+		combSort(arr , false);
 		 
 		System.out.println("\nThe sorted array in descending order is :  ");
 		

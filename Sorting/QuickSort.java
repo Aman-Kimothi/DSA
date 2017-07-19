@@ -1,4 +1,9 @@
-class Sorting
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+class QuickSort
 {
 	 // l : left and r : right	
 	static int partition(int arr[] , int l , int r , boolean isAscending)  {
@@ -34,14 +39,14 @@ class Sorting
 		return i+1;
 	}
 	
-	static void quick_sort(int arr[] , int l , int r, boolean isAscending)  {
+	static void quickSort(int arr[] , int l , int r, boolean isAscending)  {
 		
 		if(l < r)  {
 		
 			int partition_point = partition(arr , l , r, isAscending);
 			
-			quick_sort(arr , l , partition_point - 1 , isAscending);
-			quick_sort(arr , partition_point + 1 , r , isAscending);
+			quickSort(arr , l , partition_point - 1 , isAscending);
+			quickSort(arr , partition_point + 1 , r , isAscending);
 		}
 		
 	}
@@ -51,13 +56,13 @@ class Sorting
 		
 		int arr[] =  {-12, 11, 13, -5, 6, 7};
 		
-		quick_sort(arr , 0 , arr.length-1 , true);
+		quickSort(arr , 0 , arr.length-1 , true);
 		
 		System.out.print("The sorted values in ascending order are : ");
 		for(int x : arr)
 			System.out.print(x + "\t");
 			
-		quick_sort(arr , 0 , arr.length-1 , false);
+		quickSort(arr , 0 , arr.length-1 , false);
 		
 		System.out.print("\nThe sorted values in descending order are : ");
 		for(int x : arr)

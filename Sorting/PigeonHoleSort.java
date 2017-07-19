@@ -1,10 +1,16 @@
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+
 import java.util.ArrayList;
-class PigeonHole_Sort
+class PigeonHoleSort
 {
 	// This sorting technique is same as Counting Sort but not as efficient as Counting Sort 
 	// It is not very efficient if the range is becomes very large.
 	
-	public static int[] pigeonhole_sort(int arr[] , boolean isAscending )  {
+	public static int[] pigeonHoleSort(int arr[] , boolean isAscending )  {
 		
 		int len = arr.length ;
 		int min = arr[0] , max = arr[0];
@@ -50,12 +56,12 @@ class PigeonHole_Sort
 		
 		int arr[] = {234, 44, 124, 49, 56, 3, 844, 223, 234, 141, 444};
 		
-		arr = pigeonhole_sort(arr , true);
+		arr = pigeonHoleSort(arr , true);
 		
 		System.out.print("The ascending order is : " );
 		for(int x : arr)	System.out.print(x + "\t");
 		
-		arr = pigeonhole_sort(arr , false);
+		arr = pigeonHoleSort(arr , false);
 		
 		System.out.print("\nThe descending order is : " );
 		for(int x : arr)	System.out.print(x + "\t");

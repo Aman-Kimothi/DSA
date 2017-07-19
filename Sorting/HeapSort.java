@@ -1,8 +1,13 @@
-class Heap_Sort
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+class HeapSort
 {
-	// We're usign max_heap to get the Ascending Order and min_heap to get the Descending Order
+	// We're usign maxHeap to get the Ascending Order and minHeap to get the Descending Order
 
-	static void max_heap(int arr[] , int len , int i )  {
+	static void maxHeap(int arr[] , int len , int i )  {
 		
 		int largest = i;       // taking the root as the largest
 		int left = i*2 + 1;    // left subtree
@@ -20,11 +25,11 @@ class Heap_Sort
 			arr[largest] = arr[i];
 			arr[i] = temp;
 			
-			max_heap(arr,len,largest);  // using max_heap to maximize the affected tree
+			maxHeap(arr,len,largest);  // using maxHeap to maximize the affected tree
 		}	
 	}
 	
-	static void min_heap(int arr[] , int len , int i )  {
+	static void minHeap(int arr[] , int len , int i )  {
 		
 		int smallest = i;       // taking the root as the smallest
 		int left = i*2 + 1;    // left subtree
@@ -42,21 +47,21 @@ class Heap_Sort
 			arr[smallest] = arr[i];
 			arr[i] = temp;
 			
-			min_heap(arr,len,smallest);  // using min_heap to minimize the affected tree
+			minHeap(arr,len,smallest);  // using minHeap to minimize the affected tree
 		}	
 	}
 	
-	static void heap_sort(int arr[] , boolean isAscending )  {
+	static void heapSort(int arr[] , boolean isAscending )  {
 		
 		int len=arr.length;
 		
 		if(isAscending) {
-			for(int i=len/2 -1 ; i>=0 ; i--)    // Converting the array into max_heap 
-				max_heap(arr,len,i);
+			for(int i=len/2 -1 ; i>=0 ; i--)    // Converting the array into maxHeap 
+				maxHeap(arr,len,i);
 		}
 		else {
-			for(int i=len/2 -1 ; i>=0 ; i--)    // Converting the array into min_heap 
-				min_heap(arr,len,i);
+			for(int i=len/2 -1 ; i>=0 ; i--)    // Converting the array into minHeap 
+				minHeap(arr,len,i);
 		}
 			
 		if(isAscending)  {				// Ascending Order
@@ -67,7 +72,7 @@ class Heap_Sort
 				arr[i] = arr[0];
 				arr[0] = temp;
 				
-				max_heap(arr, i, 0);
+				maxHeap(arr, i, 0);
 			}
 		}
 		else  {				// Descending Order
@@ -78,7 +83,7 @@ class Heap_Sort
 				arr[i] = arr[0];
 				arr[0] = temp;
 				
-				min_heap(arr, i, 0);
+				minHeap(arr, i, 0);
 			}
 		}
 	}
@@ -87,12 +92,12 @@ class Heap_Sort
 	{
 		int arr[] =  {-12, 11, -13, 5, 6, -7 , 24 , 44 , 22 -4 , 0};
 		
-		heap_sort(arr , true);
+		heapSort(arr , true);
 		
 		System.out.print("The ascending order is : " );
 		for(int x : arr)	System.out.print(x + "\t");
 		
-		heap_sort(arr , false);
+		heapSort(arr , false);
 		
 		System.out.print("\nThe descending order is : " );
 		for(int x : arr)	System.out.print(x + "\t");

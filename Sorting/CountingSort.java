@@ -1,7 +1,13 @@
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+
 import java.util.Arrays;
-class Counting_Sort
+class CountingSort
 {
-	static char[] counting_sort(char arr[] , boolean isAscending)  {
+	static char[] countingSort(char arr[] , boolean isAscending)  {
 		
 		int len=arr.length;
 		
@@ -40,8 +46,8 @@ class Counting_Sort
 		char arr[] =  {'9', '1', '3', '5', '6', '7'};
 		char brr[] =  {'g', 'e', 'e', 'k', 's', 'f', 'o', 'r', 'g', 'e', 'e', 'k', 's'};
 		
-		arr = counting_sort(arr , true);
-		brr = counting_sort(brr , false);
+		arr = countingSort(arr , true);
+		brr = countingSort(brr , false);
 		
 		System.out.println("The sorted int array in ascending order is :  ");
 		

@@ -1,5 +1,11 @@
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+
 import java.util.Arrays;
-class Radix_Sort
+class RadixSort
 {
 	static int findMax(int arr[]) {
 	
@@ -9,23 +15,23 @@ class Radix_Sort
 		}
 		return max;
 	}
-	static int[] radix_sort(int arr[] , boolean isAscending)  {
+	static int[] radixSort(int arr[] , boolean isAscending)  {
 		
 		int max = findMax(arr)  ,  digits = 0;  	
 		
 		while(0 < max) {
 			digits++;
-			max/=10;
+			max /= 10;
 		}
 		
 		for(int i = 0 ; i < digits ; i++) {
-			arr = counting_sort(arr , (int)Math.pow(10, i) , isAscending);
+			arr = countingSort(arr , (int)Math.pow(10, i) , isAscending);
 		}
 		
 		return arr;
 	}
 	
-	static int[] counting_sort(int arr[], int emp , boolean isAscending)  {
+	static int[] countingSort(int arr[], int emp , boolean isAscending)  {
 		
 		int len = arr.length;
 		
@@ -37,7 +43,7 @@ class Radix_Sort
 		for(int i = 0; i < len; i++)		    		//  Adding the frequencies to the count[]
 			++count[(arr[i] / emp) % 10];
 
-// 		for(int i = 1 ; i < 10; i++)   	     			// Finding cumulative frequency of each element
+ 		for(int i = 1 ; i < 10; i++)   	     			// Finding cumulative frequency of each element
 			count[i] += count[i-1];
 
 		if(isAscending) {      					// Ascending Order
@@ -65,13 +71,13 @@ class Radix_Sort
 		
 		int brr[] = {170, 15, 55, 190, 82, 4, 122, 61};
 		
-		arr = radix_sort(arr , true);
+		arr = radixSort(arr , true);
 		
 		System.out.println("The sorted array in ascending order is :  ");
 		
 		for(int x : arr)	System.out.print(x + "\t");
 		
-		brr = radix_sort(brr , false);
+		brr = radixSort(brr , false);
 		
 		System.out.println("\nThe sorted array in descending order is :  ");
 		

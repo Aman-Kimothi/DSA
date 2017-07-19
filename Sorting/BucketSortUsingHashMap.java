@@ -1,9 +1,15 @@
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+
 import java.util.Collections;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-class Bucket_Sort_using_HashMap
+class BucketSortUsingHashMap
 {
 	static double max(double arr[]) {        // Returning the maximum element of the input array
 		double max = arr[0];
@@ -15,7 +21,7 @@ class Bucket_Sort_using_HashMap
 		return max;		
 	}
 	
-	static double[] bucket_sort(double arr[], boolean isAscending )  {
+	static double[] bucketSort(double arr[], boolean isAscending )  {
 		
 		int len = arr.length;
 		double output[] = new double[len];
@@ -74,12 +80,12 @@ class Bucket_Sort_using_HashMap
 		double arr[] =  {12.91, 312.122, 121.32, 32.25, 11.36, 43.27 , 33.18 , 34.56 ,54.22 ,433.75};
 		double brr[] =  {.91, .122, .32, .25, .36, .27 , .18 , .56 , .22 , .75};
 		
-		arr = bucket_sort(arr , true);
+		arr = bucketSort(arr , true);
 		System.out.println("The sorted array in ascending order is :  ");
 		
 		for(double x : arr)		System.out.print(x + "\t");
 			
-		brr = bucket_sort(brr , false);
+		brr = bucketSort(brr , false);
 		System.out.println("\nThe sorted array in descending order is :  ");
 		
 		for(double x : brr)		System.out.print(x + "\t");

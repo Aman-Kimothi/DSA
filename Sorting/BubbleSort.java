@@ -1,6 +1,12 @@
-class Bubble_Sort
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+
+class BubbleSort
 {	
-	static void bubble_sort(int arr[] , boolean isAscending)  {
+	static void bubbleSort(int arr[] , boolean isAscending)  {
 		
 		boolean flag = true;  // check for different passes.
 		
@@ -38,12 +44,12 @@ class Bubble_Sort
 	{
 		int arr[] =  {-12, 11, 13, -5, 6, 7 , 2};
                   
-		bubble_sort(arr , true);
+		bubbleSort(arr , true);
 		
 		System.out.print("The ascending order is : " );
 		for(int x : arr)	System.out.print(x + "\t");
 		
-		bubble_sort(arr , false);
+		bubbleSort(arr , false);
 		
 		System.out.print("\nThe descending order is : " );
 		for(int x : arr)	System.out.print(x + "\t");

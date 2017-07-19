@@ -1,6 +1,12 @@
-class Selection_sort
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+
+class SelectionSort
 {
-	static void selection_sort(int arr[] , boolean isAscending)  {
+	static void selectionSort(int arr[] , boolean isAscending)  {
 		
 		for(int i = 0; i < arr.length; i++)  {
 			int pos = i;
@@ -27,12 +33,12 @@ class Selection_sort
 	{
 		int arr[] =  {-12, 11, 13, -5, 6, 7 , 11, 2};
                   
-		selection_sort(arr , true);
+		selectionSort(arr , true);
 		
 		System.out.print("The ascending order is : " );
 		for(int x : arr)	System.out.print(x + "\t");
 		
-		selection_sort(arr , false);
+		selectionSort(arr , false);
 		
 		System.out.print("\nThe descending order is : " );
 		for(int x : arr)	System.out.print(x + "\t");

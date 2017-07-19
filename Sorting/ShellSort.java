@@ -1,6 +1,12 @@
-class Shell_sort
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+
+class ShellSort
 {
-	static void shell_sort(int arr[] , boolean isAscending)  {
+	static void shellSort(int arr[] , boolean isAscending)  {
 		
 		int len = arr.length;
 		int gap = len / 2;					// taking length/2 as the gap 
@@ -28,12 +34,12 @@ class Shell_sort
 	{
 		int arr[] =  {-12, 11, 13, -5, 6, 7 , 11, 2};
 		
-		shell_sort(arr , true);
+		shellSort(arr , true);
 		System.out.println("The sorted array in ascending order is :  ");
 		
 		for(int x : arr)		System.out.print(x + "\t");
 			
-		shell_sort(arr , false);
+		shellSort(arr , false);
 		 
 		System.out.println("\nThe sorted array in descending order is :  ");
 		

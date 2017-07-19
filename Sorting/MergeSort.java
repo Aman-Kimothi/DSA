@@ -1,4 +1,10 @@
-class Sorting
+/*
+	Author : Aman Kimothi
+	E-mail : kimothiaman@gmail.com
+	Github : https://github.com/Aman-Kimothi/DSA
+*/
+
+class MergeSort
 {
 	static void merge(int arr[] , int l , int mid , int r , boolean isAscending )  {
 		
@@ -42,14 +48,14 @@ class Sorting
 	    
 	}
 	
-	static void merge_sort(int arr[] , int l ,int r , boolean isAscending )  {
+	static void mergeSort(int arr[] , int l ,int r , boolean isAscending )  {
 		
 		if(l < r) {
 		
 			int mid = l +(r - l)/2;  // Same as (l+r)/2 but avoids overflow. We can also use (l+r) >> 1 .
 			
-			merge_sort( arr , l , mid , isAscending);
-			merge_sort( arr , mid+1 , r , isAscending);
+			mergeSort( arr , l , mid , isAscending);
+			mergeSort( arr , mid+1 , r , isAscending);
 			merge(arr , l , mid , r , isAscending);
 		}
 		// isAscending is true for Ascending Order and false for Descending Order
@@ -60,13 +66,13 @@ class Sorting
 		
 		int arr[] =  {12, 11, 13, 5, 6, 7};
 		
-		merge_sort(arr , 0 , arr.length -1 , true);
+		mergeSort(arr , 0 , arr.length -1 , true);
 		
 		System.out.print("The array sorted in ascending order is : \t");
 		for(int x : arr)
 			System.out.print(x + "\t");
 			
-		merge_sort(arr , 0 , arr.length -1 , false);
+		mergeSort(arr , 0 , arr.length -1 , false);
 		
 		System.out.print("\nThe array sorted in descending order is : \t");
 		for(int x : arr)
