@@ -10,7 +10,7 @@
 	E-mail : kimothiaman@gmail.com
 	Github : https://github.com/Aman-Kimothi/DSA
 */
-class Merge_two_sorted_linked_lists  {
+class MergeTwoSortedLinkedLists  {
 	
 	static class Node {
 		int data;
@@ -22,7 +22,7 @@ class Merge_two_sorted_linked_lists  {
 		}
 	}
 	
-	Node add_front(int data , Node head)  {
+	Node addFront(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -63,23 +63,23 @@ class Merge_two_sorted_linked_lists  {
 	
 	public static void main(String args[]) {
 		
-		Merge_two_sorted_linked_lists list = new Merge_two_sorted_linked_lists();
+		MergeTwoSortedLinkedLists list = new MergeTwoSortedLinkedLists();
 		
 		Node head1 = null, head2 = null, head3 = null;
 		
-		head1 = list.add_front(61230 , head1);
-		head1 = list.add_front(4220 , head1);
-		head1 = list.add_front(310 , head1);
-		head1 = list.add_front(70 , head1);
-		head1 = list.add_front(40 , head1);
-		head1 = list.add_front(10 , head1);
+		head1 = list.addFront(61230 , head1);
+		head1 = list.addFront(4220 , head1);
+		head1 = list.addFront(310 , head1);
+		head1 = list.addFront(70 , head1);
+		head1 = list.addFront(40 , head1);
+		head1 = list.addFront(10 , head1);
 		
-		head2 = list.add_front(6245 , head2);
-		head2 = list.add_front(2344 , head2);
-		head2 = list.add_front(2221 , head2);
-		head2 = list.add_front(880 , head2);
-		head2 = list.add_front(60 , head2);
-		head2 = list.add_front(23 , head2);
+		head2 = list.addFront(6245 , head2);
+		head2 = list.addFront(2344 , head2);
+		head2 = list.addFront(2221 , head2);
+		head2 = list.addFront(880 , head2);
+		head2 = list.addFront(60 , head2);
+		head2 = list.addFront(23 , head2);
 	
 		System.out.println("1st Sorted Linked List is : " );
 		list.print(head1); 			// Sorted Linked List 1

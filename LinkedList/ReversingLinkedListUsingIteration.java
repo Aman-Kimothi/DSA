@@ -15,7 +15,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Reversing_linked_list_using_iteration  {
+class ReversingLinkedListUsingIteration  {
 	
     static class Node {
 		int data;
@@ -27,7 +27,7 @@ class Reversing_linked_list_using_iteration  {
 		}
 	}
 	
-	Node add_front(int data, Node head)  {
+	Node addFront(int data, Node head)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -62,18 +62,18 @@ class Reversing_linked_list_using_iteration  {
 	
 	public static void main(String args[]) {
 		
-		Reversing_linked_list_using_iteration obj = new Reversing_linked_list_using_iteration();
+		ReversingLinkedListUsingIteration obj = new ReversingLinkedListUsingIteration();
 		
 		Node head = null;
 		
-		head = obj.add_front(8, head);
-		head = obj.add_front(7, head);
-		head = obj.add_front(6, head);
-		head = obj.add_front(5, head);
-		head = obj.add_front(4, head);
-		head = obj.add_front(3, head);
-		head = obj.add_front(2, head);
-		head = obj.add_front(1, head);
+		head = obj.addFront(8, head);
+		head = obj.addFront(7, head);
+		head = obj.addFront(6, head);
+		head = obj.addFront(5, head);
+		head = obj.addFront(4, head);
+		head = obj.addFront(3, head);
+		head = obj.addFront(2, head);
+		head = obj.addFront(1, head);
 		
 		System.out.println("Before reversing : ");
 		obj.print(head);	

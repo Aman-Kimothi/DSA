@@ -9,7 +9,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Deletion_of_Nodes {
+class DeletionOfNodes {
 	
 	static class Node {
 		int data;
@@ -20,7 +20,7 @@ class Deletion_of_Nodes {
 		}
 	}
 	
-	Node add_front(int data , Node head)  {
+	Node addFront(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -28,7 +28,7 @@ class Deletion_of_Nodes {
 		return head;
 	}
 	
-	Node delete_by_value(int data, Node head)  {			
+	Node deleteByValue(int data, Node head)  {			
 		
 		Node curr = head;
 		Node prev = null;
@@ -45,7 +45,7 @@ class Deletion_of_Nodes {
 		return head;
 	}
 	
-	Node delete_by_index(int pos , Node head) {
+	Node deleteByIndex(int pos , Node head) {
 		
 		if(pos == 1) {
 			head = head.next;
@@ -80,16 +80,16 @@ class Deletion_of_Nodes {
 	}
 	public static void main(String args[]) {
 		
-		Deletion_of_Nodes obj = new Deletion_of_Nodes();
+		DeletionOfNodes obj = new DeletionOfNodes();
 		
 		Node head = null;
 		
-		head = obj.add_front( 44 , head);
-		head = obj.add_front( 11, head);
-		head = obj.add_front( 32 , head);
-		head = obj.add_front( 1, head);
-		head = obj.add_front( 2333 , head);
-		head = obj.add_front( 11223, head);
+		head = obj.addFront( 44 , head);
+		head = obj.addFront( 11, head);
+		head = obj.addFront( 32 , head);
+		head = obj.addFront( 1, head);
+		head = obj.addFront( 2333 , head);
+		head = obj.addFront( 11223, head);
 				
 		
 		System.out.println("Before deletion : " );
@@ -97,8 +97,8 @@ class Deletion_of_Nodes {
 		
 		System.out.println("\nAfter deletion :" );
 		
-		head = obj.delete_by_index(6, head);     		// Deleting from a position
-		head = obj.delete_by_value(2333, head);			// Deleting a value 
+		head = obj.deleteByIndex(6, head);     		// Deleting from a position
+		head = obj.deleteByValue(2333, head);			// Deleting a value 
 		obj.printList(head);
 	}
 }

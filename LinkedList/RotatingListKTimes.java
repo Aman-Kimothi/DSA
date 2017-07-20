@@ -12,7 +12,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Rotating_list_k_times  {
+class RotatingListKTimes  {
 	
 	static class Node {
 		int data;
@@ -24,7 +24,7 @@ class Rotating_list_k_times  {
 		}
 	}
 	
-	Node add_front(int data , Node head)  {
+	Node addFront(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -76,19 +76,19 @@ class Rotating_list_k_times  {
 	
 	public static void main(String args[]) {
 		
-		Rotating_list_k_times list = new Rotating_list_k_times();
+		RotatingListKTimes list = new RotatingListKTimes();
 		
 		Node head = null;
 		
-		head = list.add_front(9 , head);
-		head = list.add_front(8 , head);
-		head = list.add_front(7 , head);
-		head = list.add_front(6 , head);
-		head = list.add_front(5 , head);
-		head = list.add_front(4 , head);
-		head = list.add_front(3 , head);
-		head = list.add_front(2 , head);
-		head = list.add_front(1 , head);
+		head = list.addFront(9 , head);
+		head = list.addFront(8 , head);
+		head = list.addFront(7 , head);
+		head = list.addFront(6 , head);
+		head = list.addFront(5 , head);
+		head = list.addFront(4 , head);
+		head = list.addFront(3 , head);
+		head = list.addFront(2 , head);
+		head = list.addFront(1 , head);
 		
 		list.print(head);	
                 

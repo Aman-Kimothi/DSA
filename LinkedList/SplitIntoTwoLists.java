@@ -14,7 +14,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Split_into_two_lists {
+class SplitIntoTwoLists {
 	
 	static class Node {
 		int data;
@@ -25,7 +25,7 @@ class Split_into_two_lists {
 		}
 	}
 	
-	Node add_front(int data , Node head)  {
+	Node addFront(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -70,17 +70,17 @@ class Split_into_two_lists {
 	
 	public static void main(String args[]) {
 		
-		Split_into_two_lists obj = new Split_into_two_lists();
+		SplitIntoTwoLists obj = new SplitIntoTwoLists();
 		
 		Node head1 = null , head2= null;
 		
-		head1 = obj.add_front( 7 , head1);
-		head1 = obj.add_front( 6 , head1);
-		head1 = obj.add_front( 5 , head1);
-		head1 = obj.add_front( 4 , head1);
-		head1 = obj.add_front( 3 , head1);
-		head1 = obj.add_front( 2 , head1);
-		head1 = obj.add_front( 1 , head1);
+		head1 = obj.addFront( 7 , head1);
+		head1 = obj.addFront( 6 , head1);
+		head1 = obj.addFront( 5 , head1);
+		head1 = obj.addFront( 4 , head1);
+		head1 = obj.addFront( 3 , head1);
+		head1 = obj.addFront( 2 , head1);
+		head1 = obj.addFront( 1 , head1);
 		
 		System.out.print("The linked list is :  " );
 		obj.printList(head1);

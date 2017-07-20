@@ -17,7 +17,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Sorted_Insertion_CircularLinkedList  {
+class SortedInsertionCircularLinkedList  {
 	
     static class Node {
 		int data;
@@ -29,7 +29,7 @@ class Sorted_Insertion_CircularLinkedList  {
 		}
 	}
         
-	Node add_front(int data , Node last)  {
+	Node addFront(int data , Node last)  {
 		
 		Node new_node = new Node(data);
 		
@@ -44,7 +44,7 @@ class Sorted_Insertion_CircularLinkedList  {
 		return last;
 	}
 	
-	Node add_end(int data , Node last)  {
+	Node addEnd(int data , Node last)  {
 		
 		Node new_node = new Node(data) ;
 		
@@ -116,7 +116,7 @@ class Sorted_Insertion_CircularLinkedList  {
 	
 	public static void main(String args[]) {
 		
-		Sorted_Insertion_CircularLinkedList list = new Sorted_Insertion_CircularLinkedList();
+		SortedInsertionCircularLinkedList list = new SortedInsertionCircularLinkedList();
                 
 		Node last = null;           // Circular Linked List
 

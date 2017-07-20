@@ -13,7 +13,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Splitting_CircularLinkedList_into_two_lists  {
+class SplittingCircularLinkedListIntoTwoLists  {
 	
     static class Node {
 		int data;
@@ -25,7 +25,7 @@ class Splitting_CircularLinkedList_into_two_lists  {
 		}
 	}
     
-    Node add_front(int data , Node last)  {
+    Node addFront(int data , Node last)  {
         
         Node new_node = new Node(data);
         
@@ -40,7 +40,7 @@ class Splitting_CircularLinkedList_into_two_lists  {
         return last;
     }
     
-    Node add_end(int data , Node last)  {
+    Node addEnd(int data , Node last)  {
         
         Node new_node = new Node(data) ;
         
@@ -103,19 +103,19 @@ class Splitting_CircularLinkedList_into_two_lists  {
 
 	public static void main(String args[]) {
 		
-		Splitting_CircularLinkedList_into_two_lists list = new Splitting_CircularLinkedList_into_two_lists();
+		SplittingCircularLinkedListIntoTwoLists list = new SplittingCircularLinkedListIntoTwoLists();
 				
 		Node last = null;           // Circular Linked List
 		
-		last = list.add_front(5 , last);
-		last = list.add_front(4 , last);
-		last = list.add_front(3 , last);
-		last = list.add_front(2 , last);
-		last = list.add_front(1 , last);
-		last = list.add_end(9 , last);
-		last = list.add_end(8 , last);
-		last = list.add_end(7 , last);
-		last = list.add_end(6 , last);
+		last = list.addFront(5 , last);
+		last = list.addFront(4 , last);
+		last = list.addFront(3 , last);
+		last = list.addFront(2 , last);
+		last = list.addFront(1 , last);
+		last = list.addEnd(9 , last);
+		last = list.addEnd(8 , last);
+		last = list.addEnd(7 , last);
+		last = list.addEnd(6 , last);
 				
 		list.print(last);	
 		

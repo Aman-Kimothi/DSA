@@ -15,7 +15,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Reversing_linked_list_using_recursion  {
+class ReversingLinkedListUsingRecursion  {
 	
     static Node head;
 	
@@ -29,7 +29,7 @@ class Reversing_linked_list_using_recursion  {
 		}
 	}
 	
-	void add_front(int data)  {
+	void addFront(int data)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -64,16 +64,16 @@ class Reversing_linked_list_using_recursion  {
 	
 	public static void main(String args[]) {
 		
-		Reversing_linked_list_using_recursion obj = new Reversing_linked_list_using_recursion();
+		ReversingLinkedListUsingRecursion obj = new ReversingLinkedListUsingRecursion();
 		
-		obj.add_front(8);
-		obj.add_front(7);
-		obj.add_front(6);
-		obj.add_front(5);
-		obj.add_front(4);
-		obj.add_front(3);
-		obj.add_front(2);
-		obj.add_front(1);
+		obj.addFront(8);
+		obj.addFront(7);
+		obj.addFront(6);
+		obj.addFront(5);
+		obj.addFront(4);
+		obj.addFront(3);
+		obj.addFront(2);
+		obj.addFront(1);
 		
 		System.out.println("Before reversing : ");
 		obj.print();	

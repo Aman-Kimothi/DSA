@@ -11,7 +11,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Reversing_into_groups_of_k_using_recursion  {
+class ReversingIntoGroupsOfKUsingRecursion  {
 	
 	static Node head1 , head2 ;
 	
@@ -25,7 +25,7 @@ class Reversing_into_groups_of_k_using_recursion  {
 		}
 	}
 	
-	Node add_front(int data , Node head)  {
+	Node addFront(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -123,16 +123,16 @@ class Reversing_into_groups_of_k_using_recursion  {
 	
 	public static void main(String args[]) {
 		
-		Reversing_into_groups_of_k_using_recursion list = new Reversing_into_groups_of_k_using_recursion();
+		ReversingIntoGroupsOfKUsingRecursion list = new ReversingIntoGroupsOfKUsingRecursion();
 		
-		head1 = list.add_front(8 , head1);
-		head1 = list.add_front(7 , head1);
-		head1 = list.add_front(6 , head1);
-		head1 = list.add_front(5 , head1);
-		head1 = list.add_front(4 , head1);
-		head1 = list.add_front(3 , head1);
-		head1 = list.add_front(2 , head1);
-		head1 = list.add_front(1 , head1);
+		head1 = list.addFront(8 , head1);
+		head1 = list.addFront(7 , head1);
+		head1 = list.addFront(6 , head1);
+		head1 = list.addFront(5 , head1);
+		head1 = list.addFront(4 , head1);
+		head1 = list.addFront(3 , head1);
+		head1 = list.addFront(2 , head1);
+		head1 = list.addFront(1 , head1);
 		
 		list.print(head1);	
 		

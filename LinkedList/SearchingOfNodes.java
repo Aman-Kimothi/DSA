@@ -10,7 +10,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Searching_of_Nodes {
+class SearchingOfNodes {
 	
 	static class Node {
 		int data;
@@ -21,7 +21,7 @@ class Searching_of_Nodes {
 		}
 	}
 	
-	Node add_front(int data , Node head)  {
+	Node addFront(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -64,16 +64,16 @@ class Searching_of_Nodes {
 	
 	public static void main(String args[]) {
 		
-		Searching_of_Nodes obj = new Searching_of_Nodes();
+		SearchingOfNodes obj = new SearchingOfNodes();
 		
 		Node head = null;
 		
-		head = obj.add_front( 44 , head);
-		head = obj.add_front( 11, head);
-		head = obj.add_front( 32 , head);
-		head = obj.add_front( 1, head);
-		head = obj.add_front( 2333 , head);
-		head = obj.add_front( 11223, head);
+		head = obj.addFront( 44 , head);
+		head = obj.addFront( 11, head);
+		head = obj.addFront( 32 , head);
+		head = obj.addFront( 1, head);
+		head = obj.addFront( 2333 , head);
+		head = obj.addFront( 11223, head);
 		
 		System.out.print("The linked list is :  " );
 		obj.printList(head);

@@ -10,7 +10,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Insertion_of_Nodes {
+class InsertionOfNodes {
 	
 	static class Node {
 		int data;
@@ -21,7 +21,7 @@ class Insertion_of_Nodes {
 		}
 	}
 	
-	Node add_front(int data , Node head)  {
+	Node addFront(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -29,7 +29,7 @@ class Insertion_of_Nodes {
 		return head;
 	}
 	
-	Node add_end(int data , Node head)  {
+	Node addEnd(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		
@@ -46,7 +46,7 @@ class Insertion_of_Nodes {
 		temp.next = new_node;	
 		return head;	
 	}
-	Node add_index(int data , Node head , int pos)  {
+	Node addIndex(int data , Node head , int pos)  {
 		
 		Node new_node = new Node(data);
 		
@@ -95,16 +95,16 @@ class Insertion_of_Nodes {
 	}
 	public static void main(String args[]) {
 		
-		Insertion_of_Nodes obj = new Insertion_of_Nodes();
+		InsertionOfNodes obj = new InsertionOfNodes();
 		
 		Node head = null;
 		
-		head = obj.add_front( 44 , head);
-		head = obj.add_front( 11, head);
-		head = obj.add_end( 2333, head);
-		head = obj.add_end( 5000, head);
-		head = obj.add_index( 13, head , 1);
-		head = obj.add_index( 77 , head, 2);
+		head = obj.addFront( 44 , head);
+		head = obj.addFront( 11, head);
+		head = obj.addEnd( 2333, head);
+		head = obj.addEnd( 5000, head);
+		head = obj.addIndex( 13, head , 1);
+		head = obj.addIndex( 77 , head, 2);
 		
 		System.out.println("The linked list is : " );
 		obj.printList(head);

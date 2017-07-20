@@ -13,7 +13,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Adding_two_numbers_representated_as_lists {
+class AddingTwoNumbersRepresentatedAsLists {
 	
 	static class Node {
 		int data;
@@ -24,7 +24,7 @@ class Adding_two_numbers_representated_as_lists {
 		}
 	}
 	
-	Node add_front(int data , Node head)  {
+	Node addFront(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -32,7 +32,7 @@ class Adding_two_numbers_representated_as_lists {
 		return head;
 	}
 	
-	Node add_end(int data , Node head)  {
+	Node addEnd(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		
@@ -57,7 +57,7 @@ class Adding_two_numbers_representated_as_lists {
 		
 		while(head1 != null && head2 != null) {			// to store the added elements of both the lists
 			int temp = head1.data + head2.data + carry;
-			result = add_end(temp % 10 , result);
+			result = addEnd(temp % 10 , result);
 			carry = temp / 10;
 			head1 = head1.next;
 			head2 = head2.next;
@@ -65,20 +65,20 @@ class Adding_two_numbers_representated_as_lists {
 		
 		while(head1 != null)  {							// This adds the rest elements when head2 gets finished
 			int temp = head1.data + carry;
-			result = add_end(temp % 10 , result);
+			result = addEnd(temp % 10 , result);
 			carry = temp / 10;
 			head1 = head1.next;
 		}
 		
 		while(head2 != null)  {							// This adds the rest elements when head1 gets finished
 			int temp = head2.data + carry;
-			result = add_end(temp % 10 , result);
+			result = addEnd(temp % 10 , result);
 			carry = temp / 10;
 			head2 = head2.next;
 		}
 		
 		if(carry > 0 )
-			result = add_end(carry , result);
+			result = addEnd(carry , result);
 			
 		return result;	
 	}
@@ -96,17 +96,17 @@ class Adding_two_numbers_representated_as_lists {
 	
 	public static void main(String args[]) {
 		
-		Adding_two_numbers_representated_as_lists obj = new Adding_two_numbers_representated_as_lists();
+		AddingTwoNumbersRepresentatedAsLists obj = new AddingTwoNumbersRepresentatedAsLists();
 		
 		Node head1 = null , head2 = null , head3 = null;
 		
-		head1 = obj.add_front(3 , head1);
-		head1 = obj.add_front(6 , head1);
-		head1 = obj.add_front(5 , head1);
+		head1 = obj.addFront(3 , head1);
+		head1 = obj.addFront(6 , head1);
+		head1 = obj.addFront(5 , head1);
 		
-		head2 = obj.add_front(2 , head2);
-		head2 = obj.add_front(4 , head2);
-		head2 = obj.add_front(8 , head2);
+		head2 = obj.addFront(2 , head2);
+		head2 = obj.addFront(4 , head2);
+		head2 = obj.addFront(8 , head2);
 		
 		System.out.print("Number 1\t : ");
 		obj.printList(head1);	

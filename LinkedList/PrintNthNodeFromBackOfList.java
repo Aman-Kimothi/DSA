@@ -11,7 +11,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Print_Nth_node_from_back_of_a_list {
+class PrintNthNodeFromBackOfList {
 	
 	static class Node {
 		int data;
@@ -22,7 +22,7 @@ class Print_Nth_node_from_back_of_a_list {
 		}
 	}
 	
-	Node add_front(int data , Node head)  {
+	Node addFront(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -65,16 +65,16 @@ class Print_Nth_node_from_back_of_a_list {
 	
 	public static void main(String args[]) {
 		
-		Print_Nth_node_from_back_of_a_list obj = new Print_Nth_node_from_back_of_a_list();
+		PrintNthNodeFromBackOfList obj = new PrintNthNodeFromBackOfList();
 		
 		Node head = null;
 		
-		head = obj.add_front( 6 , head);
-		head = obj.add_front( 5 , head);
-		head = obj.add_front( 4 , head);
-		head = obj.add_front( 3 , head);
-		head = obj.add_front( 2 , head);
-		head = obj.add_front( 1 , head);
+		head = obj.addFront( 6 , head);
+		head = obj.addFront( 5 , head);
+		head = obj.addFront( 4 , head);
+		head = obj.addFront( 3 , head);
+		head = obj.addFront( 2 , head);
+		head = obj.addFront( 1 , head);
 		
 		obj.printList(head);
 		System.out.println();

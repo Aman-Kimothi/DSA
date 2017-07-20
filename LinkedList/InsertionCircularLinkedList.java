@@ -11,7 +11,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Insertion_CircularLinkedList  {
+class InsertionCircularLinkedList  {
 	
     static class Node {
 		int data;
@@ -38,7 +38,7 @@ class Insertion_CircularLinkedList  {
         return last;
     }
     
-    Node add_end(int data , Node last)  {
+    Node addEnd(int data , Node last)  {
         
         Node new_node = new Node(data) ;
         
@@ -56,13 +56,13 @@ class Insertion_CircularLinkedList  {
     
     /* There are 2 functions for adding a node after a specified node whose value is given.
 			
-		1.  add_after()
-		2.  add_after_value()
+		1.  addAfter()
+		2.  addAfterValue()
 		
 		Both the functions work properly, but the second one is more readable and efficient.
 	*/
 	
-    Node add_after(int data , Node last , int value)  {
+    Node addAfter(int data , Node last , int value)  {
         
         
         if(last == null) {
@@ -98,7 +98,7 @@ class Insertion_CircularLinkedList  {
     // This is a better function for adding a node after a node.
     // Do not use the above function.
     
-    Node add_after_value(int data , Node last , int value) {
+    Node addAfterValue(int data , Node last , int value) {
         
         if(last == null) {    
             System.out.println(data +" cannot be added because the Linked List is empty");
@@ -149,28 +149,28 @@ class Insertion_CircularLinkedList  {
 
 	public static void main(String args[]) {
 	
-	Insertion_CircularLinkedList list = new Insertion_CircularLinkedList();
+	InsertionCircularLinkedList list = new InsertionCircularLinkedList();
             
         Node last = null;           // Circular Linked List
 	
-	last = list.add_front(5 , last);
-	last = list.add_front(4 , last);
-	last = list.add_front(3 , last);
-	last = list.add_front(2 , last);
-	last = list.add_front(1 , last);
-	last = list.add_end(9 , last);
-	last = list.add_end(8 , last);
-	last = list.add_end(7 , last);
-	last = list.add_end(6 , last);
+		last = list.add_front(5 , last);
+		last = list.add_front(4 , last);
+		last = list.add_front(3 , last);
+		last = list.add_front(2 , last);
+		last = list.add_front(1 , last);
+		last = list.addEnd(9 , last);
+		last = list.addEnd(8 , last);
+		last = list.addEnd(7 , last);
+		last = list.addEnd(6 , last);
         
         System.out.println("Circular Linked List is : " );
         list.print(last);	
         
-        last = list.add_after(6 , last , 1);
-        last = list.add_after(10 , last , 9);
+        last = list.addAfter(6 , last , 1);
+        last = list.addAfter(10 , last , 9);
         
-        last = list.add_after_value(11 , last , 8);
-        last = list.add_after_value(98 , last , 7);
+        last = list.addAfterValue(11 , last , 8);
+        last = list.addAfterValue(98 , last , 7);
         
         System.out.println("Circular Linked List after insertion is : " );
         list.print(last);	

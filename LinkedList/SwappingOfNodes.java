@@ -11,7 +11,7 @@
 	Github : https://github.com/Aman-Kimothi/DSA
 */
 
-class Swapping_of_Nodes {
+class SwappingOfNodes {
 	
 	static class Node {
 		int data;
@@ -22,7 +22,7 @@ class Swapping_of_Nodes {
 		}
 	}
 	
-	Node add_front(int data , Node head)  {
+	Node addFront(int data , Node head)  {
 		
 		Node new_node = new Node(data);
 		new_node.next = head;
@@ -30,7 +30,7 @@ class Swapping_of_Nodes {
 		return head;
 	}
 		
-	Node swap_values(int data1 , int data2 , Node head)  {
+	Node swapValues(int data1 , int data2 , Node head)  {
 		
 		Node prev1 = null , curr1 = head;
 		Node prev2 = null , curr2 = head;
@@ -67,7 +67,7 @@ class Swapping_of_Nodes {
 		return head;
 	}
 	
-	Node swap_nodes(Node data1 , Node data2 , Node head)  {
+	Node swapNodes(Node data1 , Node data2 , Node head)  {
 		
 		Node prev1 = null , curr1 = head;
 		Node prev2 = null , curr2 = head;
@@ -116,16 +116,16 @@ class Swapping_of_Nodes {
 	
 	public static void main(String args[]) {
 		
-		Swapping_of_Nodes obj = new Swapping_of_Nodes();
+		SwappingOfNodes obj = new SwappingOfNodes();
 		
 		Node head = null;
 		
-		head = obj.add_front( 6, head);
-		head = obj.add_front( 5 , head);
-		head = obj.add_front( 4, head);
-		head = obj.add_front( 3 , head);
-		head = obj.add_front( 2, head);
-		head = obj.add_front( 1 , head);
+		head = obj.addFront( 6, head);
+		head = obj.addFront( 5 , head);
+		head = obj.addFront( 4, head);
+		head = obj.addFront( 3 , head);
+		head = obj.addFront( 2, head);
+		head = obj.addFront( 1 , head);
 		
 		System.out.print("Linked List is  :  " );
 		obj.printList(head);
@@ -138,37 +138,37 @@ class Swapping_of_Nodes {
 		}
 		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 2
-		head = obj.swap_values(1 , 2, head);
+		head = obj.swapValues(1 , 2, head);
 		obj.printList(head);
 		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 3
-		head = obj.swap_values(5 , 6, head);
+		head = obj.swapValues(5 , 6, head);
 		obj.printList(head);
 		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 4
-		head = obj.swap_values(3 , 4, head);
+		head = obj.swapValues(3 , 4, head);
 		obj.printList(head);
 		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 1
-		head = obj.swap_values(3 , 10, head);
+		head = obj.swapValues(3 , 10, head);
 		obj.printList(head);
 		
-		// Using swap_nodes to swap the nodes
+		// Using swapNodes to swap the nodes
 		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 2
-		head = obj.swap_nodes(head , head.next, head);
+		head = obj.swapNodes(head , head.next, head);
 		obj.printList(head);
 		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 3
-		head = obj.swap_nodes(head.next.next.next.next , head.next.next , head);
+		head = obj.swapNodes(head.next.next.next.next , head.next.next , head);
 		obj.printList(head);
 		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 4
-		head = obj.swap_nodes(head.next.next.next.next , head.next.next.next.next.next , head);
+		head = obj.swapNodes(head.next.next.next.next , head.next.next.next.next.next , head);
 		obj.printList(head);
 		
 		System.out.print("\nAfter swapping  :  " ); 		// Case 1
-		head = obj.swap_nodes(head.next.next.next.next , head.next.next.next.next.next.next , head);
+		head = obj.swapNodes(head.next.next.next.next , head.next.next.next.next.next.next , head);
 		obj.printList(head);
 	}
 }
