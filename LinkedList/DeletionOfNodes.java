@@ -38,14 +38,21 @@ class DeletionOfNodes {
 			curr = curr.next;
 		}
 		
-		if(curr.next == null)
+		if(prev == null)					// first element if to be deleted
+			head = head.next;
+		else if(curr.next == null && curr.data != data)		// value not found
 			System.out.println(" Value not found");
 		else 
-			prev.next = curr.next;
+			prev.next = curr.next;				// all other cases
 		return head;
 	}
 	
 	Node deleteByIndex(int pos , Node head) {
+		
+		if(pos == 0) {
+			System.out.println("Invalid Position");
+			return head;
+		}
 		
 		if(pos == 1) {
 			head = head.next;
@@ -97,8 +104,8 @@ class DeletionOfNodes {
 		
 		System.out.println("\nAfter deletion :" );
 		
-		head = obj.deleteByIndex(6, head);     		// Deleting from a position
-		head = obj.deleteByValue(2333, head);			// Deleting a value 
+		head = obj.deleteByIndex(1, head);     		// Deleting from a position
+		head = obj.deleteByValue(44, head);		// Deleting a value 
 		obj.printList(head);
 	}
 }
