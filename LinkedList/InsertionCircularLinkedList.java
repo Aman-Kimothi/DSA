@@ -153,16 +153,16 @@ class InsertionCircularLinkedList  {
             
         Node last = null;           // Circular Linked List
 	
-		last = list.add_front(5 , last);
-		last = list.add_front(4 , last);
-		last = list.add_front(3 , last);
-		last = list.add_front(2 , last);
-		last = list.add_front(1 , last);
-		last = list.addEnd(9 , last);
-		last = list.addEnd(8 , last);
-		last = list.addEnd(7 , last);
-		last = list.addEnd(6 , last);
-        
+	last = list.add_front(5 , last);
+	last = list.add_front(4 , last);
+	last = list.add_front(3 , last);
+	last = list.add_front(2 , last);
+	last = list.add_front(1 , last);
+	last = list.addEnd(9 , last);
+	last = list.addEnd(8 , last);
+	last = list.addEnd(7 , last);
+	last = list.addEnd(6 , last);
+
         System.out.println("Circular Linked List is : " );
         list.print(last);	
         
